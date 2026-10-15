@@ -108,7 +108,7 @@ class ModelRouter:
             # Ensure the explicitly requested model is front of chain if valid
             if request.model_family in candidates:
                 candidates.remove(request.model_family)
-            candidates = [request.model_family] + candidates
+            candidates = [request.model_family, *candidates]
         else:
             candidates = [request.model_family]
 

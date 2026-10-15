@@ -1,5 +1,9 @@
 # Upstream WhatsApp Rust Engine Provenance & Integration Manifest
 
+This document records the provenance, vendored components, pinned revisions, and integration boundary for upstream WhatsApp protocol libraries utilized by JARVIS.
+
+---
+
 ## 1. Upstream Repositories & Revisions
 
 ### Primary Engine: `oxidezap/whatsapp-rust`
@@ -17,6 +21,8 @@
   - `whatsapp-rust-tokio`: Tokio-based network transport and TLS client.
 - **Revision Selection Rationale**: Commit `d9f78b8` incorporates all core protocol fixes and VoIP transport enhancements following `v0.7.0` while maintaining full stability and wire-format compatibility with WhatsApp servers.
 
+---
+
 ### JS/WASM Compatibility Layer: `oxidezap/baileyrs`
 - **Repository URL**: `https://github.com/oxidezap/baileyrs.git`
 - **Vendored Location**: `vendor/baileyrs`
@@ -29,6 +35,8 @@
   - `makeWASocket`: High-level socket builder and event bus dispatcher.
   - Proto utilities and message envelope formatting.
 
+---
+
 ### WASM Bridge: `oxidezap/whatsapp-rust-bridge`
 - **Repository URL**: `https://github.com/oxidezap/whatsapp-rust-bridge.git`
 - **Vendored Location**: `vendor/whatsapp-rust-bridge`
@@ -40,6 +48,8 @@
   - `WasmWhatsAppClient`: WebAssembly compiled binding of the core engine.
   - Call operations: `rejectCall`, `sendNode`, `queryNode`.
   - Event listener bridging for incoming call offers, termination, and message upserts.
+
+---
 
 ### Conformance Reference: `WhiskeySockets/wacrg`
 - **Repository URL**: `https://github.com/WhiskeySockets/wacrg.git`

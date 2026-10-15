@@ -158,7 +158,7 @@ class SubstrateBridge:
                     if req_id and req_id in self._pending_requests:
                         future = self._pending_requests.pop(req_id)
                         if not future.done():
-                            if "error" in payload and payload["error"]:
+                            if payload.get("error"):
                                 future.set_exception(
                                     SubstrateBridgeError(
                                         payload["error"].get("message", "Unknown substrate error")

@@ -36,7 +36,7 @@ class SidecarProcess:
             logger.info(f"Sidecar '{self.name}' is already running.")
             return True
 
-        cmd = [self.executable] + self.args
+        cmd = [self.executable, *self.args]
         try:
             self.process = subprocess.Popen(
                 cmd,

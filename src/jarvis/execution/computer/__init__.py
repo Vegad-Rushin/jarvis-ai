@@ -16,9 +16,9 @@ from jarvis.execution.computer.contract import (
 
 __all__ = [
     "ActionResultEffect",
-    "ComputerActionName",
     "ComputerActParams",
     "ComputerActResult",
+    "ComputerActionName",
     "ComputerBounds",
     "ComputerObservation",
     "DeliveryMode",

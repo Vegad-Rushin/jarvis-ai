@@ -19,15 +19,15 @@ from .store import ArtifactStore, artifact_store
 
 __all__ = [
     "Artifact",
-    "ArtifactType",
-    "ArtifactSensitivity",
-    "ArtifactRetention",
-    "ArtifactSummary",
-    "ArtifactStore",
-    "artifact_store",
     "ArtifactEmitter",
-    "artifact_emitter",
-    "SidecarProcess",
+    "ArtifactRetention",
+    "ArtifactSensitivity",
+    "ArtifactStore",
+    "ArtifactSummary",
+    "ArtifactType",
     "SidecarManager",
+    "SidecarProcess",
+    "artifact_emitter",
+    "artifact_store",
     "sidecar_manager",
 ]

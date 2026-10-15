@@ -23,7 +23,7 @@ from jarvis.telemetry import logger
 class JarvisUIRequestHandler(http.server.SimpleHTTPRequestHandler):
     """Custom request handler with CORS support, explicit MIME types, and quiet telemetry."""
 
-    extensions_map = {
+    extensions_map = {  # noqa: RUF012
         **http.server.SimpleHTTPRequestHandler.extensions_map,
         ".js": "application/javascript",
         ".mjs": "application/javascript",

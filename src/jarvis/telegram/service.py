@@ -114,7 +114,7 @@ class TelegramService:
             # Verify if an operator is paired; log onboarding link if unconfigured
             has_operator = await self._authorizer.has_any_authorized_user()
             if not has_operator and self.bot_username:
-                nonce, deep_link = await self._pairing_mgr.create_pairing_challenge(
+                _nonce, deep_link = await self._pairing_mgr.create_pairing_challenge(
                     bot_username=self.bot_username
                 )
                 logger.info(

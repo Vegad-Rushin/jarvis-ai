@@ -5,7 +5,7 @@ from jarvis.actions.registry import CapabilityRegistry, capability_registry
 
 __all__ = [
     "ActionBroker",
-    "action_broker",
     "CapabilityRegistry",
+    "action_broker",
     "capability_registry",
 ]

@@ -8,8 +8,8 @@
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011%20x64-0078D6.svg)](https://www.microsoft.com/windows)
 [![Realtime Cognitive Core](https://img.shields.io/badge/cognitive%20core-Gemini%203.8%20Live-8E75C4.svg)](https://ai.google.dev/)
 [![Execution Substrate](https://img.shields.io/badge/execution-Node.js%20%2B%20UIA%20COM-informational.svg)](https://nodejs.org/)
-[![Telephony](https://img.shields.io/badge/telephony-WhatsApp%20VoIP%20WebRTC-25D366.svg)](docs/WHATSAPP_VOICE_TELEPHONY.md)
-[![Remote Control](https://img.shields.io/badge/remote%20control-Telegram%20Bot%20API-2CA5E0.svg)](docs/TELEGRAM_REMOTE_CONTROL.md)
+[![Telephony](https://img.shields.io/badge/telephony-WhatsApp%20VoIP%20WebRTC-25D366.svg)](docs/integrations/whatsapp.md)
+[![Remote Control](https://img.shields.io/badge/remote%20control-Telegram%20Bot%20API-2CA5E0.svg)](docs/integrations/telegram.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Type Safety](https://img.shields.io/badge/type%20safety-mypy%20strict-brightgreen.svg)](https://mypy-lang.org/)
 [![Code Style](https://img.shields.io/badge/code%20style-ruff-black.svg)](https://astral.sh/ruff)
@@ -135,19 +135,25 @@ graph TD
 
 ## 📚 Documentation Hub
 
-Explore detailed architectural manuals, contribution standards, and subsystem guides:
+Explore the complete, implementation-verified knowledge base in **[`docs/`](docs/)**:
 
-- **[System Architecture Specification](ARCHITECTURE.md):** Complete end-to-end architecture, signal processing equations, and subsystem blueprints.
-- **[Development Roadmap](ROADMAP.md):** Long-term strategic horizons, milestones, and capability tracking.
-- **[Contributing Guidelines](CONTRIBUTING.md):** Development environment setup, coding invariants, and pull request procedures.
-- **[Security Policy](SECURITY.md):** Trust boundary model, capability firewall rules, and responsible vulnerability disclosure.
-- **[Subsystem Manuals (`docs/`)](docs/):**
-  - [Audio & AEC Subsystem](docs/AUDIO_AEC_SUBSYSTEM.md)
-  - [Autonomous WhatsApp Voice Telephony](docs/WHATSAPP_VOICE_TELEPHONY.md)
-  - [Native Telegram Remote Control](docs/TELEGRAM_REMOTE_CONTROL.md)
-  - [Windows Application Control Engine](docs/APPLICATION_CONTROL_ENGINE.md)
-  - [Gateway & Control Plane Protocol](docs/GATEWAY_AND_CONTROL_PLANE.md)
-  - [Execution Substrate & IPC Engine](docs/EXECUTION_SUBSTRATE_IPC.md)
+- **[Master Architecture Specification](ARCHITECTURE.md):** Complete end-to-end architecture, signal processing equations, and subsystem blueprints.
+- **[Documentation Portal](docs/README.md):** Reader-intent navigation portal and complete documentation directory.
+- **[Getting Started](docs/getting-started/):**
+  - [Installation Guide](docs/getting-started/installation.md) • [Configuration](docs/getting-started/configuration.md) • [First Run](docs/getting-started/first-run.md) • [Development Setup](docs/getting-started/development-setup.md)
+- **[Architecture & Subsystems](docs/subsystems/):**
+  - [Voice & Realtime Audio](docs/subsystems/voice-and-audio.md) • [Acoustic Echo Cancellation (AEC)](docs/subsystems/audio-aec.md)
+  - [Signal Orb & Neural UI](docs/subsystems/signal-orb-and-ui.md) • [Gateway & WebSockets](docs/subsystems/gateway-and-websockets.md)
+  - [Action Broker & Policy](docs/subsystems/action-broker-and-policy.md) • [Windows Automation Engine](docs/subsystems/windows-automation.md)
+  - [Execution Substrate](docs/subsystems/execution-substrate.md) • [Browser Automation](docs/subsystems/browser-automation.md)
+- **[Integrations](docs/integrations/):**
+  - [Integrations Overview](docs/integrations/overview.md) • [Telegram Remote Control](docs/integrations/telegram.md) • [WhatsApp VoIP Telephony](docs/integrations/whatsapp.md)
+- **[Operations & Reference](docs/operations/):**
+  - [Startup & Shutdown](docs/operations/startup-and-shutdown.md) • [Testing & CI](docs/operations/testing-and-ci.md) • [Troubleshooting](docs/operations/troubleshooting.md)
+  - [Configuration Reference](docs/reference/configuration-reference.md) • [CLI Reference](docs/reference/cli-reference.md) • [Repository Map](docs/reference/repository-map.md)
+- **[Development & Security](docs/development/):**
+  - [Contributing Guidelines](docs/development/contributing.md) • [Adding a Tool](docs/development/adding-a-tool.md) • [Adding a Model Provider](docs/development/adding-a-model-provider.md)
+  - [Threat Model & Trust Architecture](docs/security/threat-model-and-trust.md) • [AI Agent Guidelines](docs/development/agent-guidelines.md)
 
 ---
 

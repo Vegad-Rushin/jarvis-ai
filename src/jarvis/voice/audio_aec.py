@@ -154,7 +154,7 @@ class WasapiLoopbackStream:
 
             class IAudioCaptureClient(IUnknown):  # type: ignore[misc]
                 _iid_ = GUID("{c8adbd64-e71e-48a0-a4de-185c395cd317}")
-                _methods_ = [
+                _methods_ = [  # noqa: RUF012
                     COMMETHOD(
                         [],
                         HRESULT,
@@ -217,7 +217,7 @@ class WasapiLoopbackStream:
                     time.sleep(0.005)
                     continue
 
-                data_p, num_frames, flags, dev_pos, qpc_pos = capture_client.GetBuffer()
+                data_p, num_frames, flags, _dev_pos, _qpc_pos = capture_client.GetBuffer()
                 self.total_packets_captured += 1
 
                 if flags & 1:  # AUDCLNT_BUFFERFLAGS_SILENT

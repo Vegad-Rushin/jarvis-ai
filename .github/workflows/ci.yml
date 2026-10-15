@@ -40,3 +40,6 @@ jobs:
 
       - name: Pytest
         run: pytest
+
+      - name: Frontend syntax check
+        run: node --check frontend/js/app.js frontend/js/config.js frontend/js/audio/player.js frontend/js/audio/recorder.js frontend/js/components/particle-field.js frontend/js/components/signal-orb.js frontend/js/components/speaking-orb.js frontend/js/gateway/client.js

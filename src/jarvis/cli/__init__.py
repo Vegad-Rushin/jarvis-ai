@@ -809,7 +809,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                         )
 
                 try:
-                    nonce, link, paired_user = asyncio.run(
+                    _nonce, _link, paired_user = asyncio.run(
                         handle_telegram_pair(
                             ttl=ttl,
                             wait=not no_wait,

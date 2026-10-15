@@ -24,16 +24,16 @@ from jarvis.agents.specialists import (
 )
 
 __all__ = [
-    "SubagentRole",
-    "SubagentStatus",
-    "SubagentSpec",
-    "SubagentResult",
-    "SpecialistProfile",
-    "RESEARCH_SPECIALIST",
-    "CODING_SPECIALIST",
     "BROWSER_SPECIALIST",
-    "VERIFY_SPECIALIST",
+    "CODING_SPECIALIST",
+    "RESEARCH_SPECIALIST",
     "SPECIALIST_REGISTRY",
+    "VERIFY_SPECIALIST",
+    "SpecialistProfile",
     "SubagentDelegator",
+    "SubagentResult",
+    "SubagentRole",
+    "SubagentSpec",
+    "SubagentStatus",
     "subagent_delegator",
 ]

@@ -670,11 +670,11 @@ async def handle_chat(
             await bridge.connect()
             voice_state_machine.transition(VoiceState.LISTENING, reason="Session connected")
 
-            # Silently warm up WhatsApp network connection in background on boot without console banners
+            wa_warmup_task: Optional[asyncio.Task[Any]] = None
             if settings.WHATSAPP_VOIP_ENABLED:
                 wa_caller = get_whatsapp_caller()
                 if wa_caller.is_available and wa_caller.has_persisted_session:
-                    asyncio.create_task(wa_caller.warmup())
+                    wa_warmup_task = asyncio.create_task(wa_caller.warmup())
 
             mic_active = False
             # When Desktop UI is active, audio I/O is delegated entirely to the Desktop App
@@ -820,6 +820,12 @@ async def handle_chat(
                     mic_task.cancel()
                     try:
                         await mic_task
+                    except asyncio.CancelledError:
+                        pass
+                if wa_warmup_task and not wa_warmup_task.done():
+                    wa_warmup_task.cancel()
+                    try:
+                        await wa_warmup_task
                     except asyncio.CancelledError:
                         pass
                 if mic_active:

@@ -14,6 +14,8 @@ def test_settings_initialization() -> None:
     assert "Gemini 3.1 Flash-Lite" in settings.ALLOWED_MODEL_FAMILIES
     assert "Gemini 3.5 Flash-Lite" in settings.ALLOWED_MODEL_FAMILIES
     assert "Gemma 4 31B" in settings.ALLOWED_MODEL_FAMILIES
+    assert settings.MODEL_MAP_GEMINI_3_1_FLASH_LITE == "gemini-3.1-flash-lite"
+    assert settings.MODEL_MAP_GEMINI_3_5_FLASH_LITE == "gemini-3.5-flash-lite"
 
 
 def test_directory_creation(test_settings: JarvisSettings) -> None:

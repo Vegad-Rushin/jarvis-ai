@@ -18,16 +18,16 @@ from jarvis.memory.working import InteractionTurn, WorkingMemory
 
 __all__ = [
     "ContextEngine",
-    "context_engine",
+    "InteractionTurn",
     "MemoryGovernance",
     "MemoryManager",
-    "memory_manager",
-    "WorkingMemory",
-    "InteractionTurn",
     "StandingIntent",
     "StandingIntentManager",
+    "WorkingMemory",
     "apply_temporal_decay",
+    "context_engine",
+    "jaccard_similarity",
+    "memory_manager",
     "mmr_rerank",
     "tokenize",
-    "jaccard_similarity",
 ]

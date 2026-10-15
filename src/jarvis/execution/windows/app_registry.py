@@ -127,7 +127,7 @@ class AppRegistry:
                         if not subkey_name.startswith((".", "{", "_")):
                             with winreg.OpenKey(root_key, subkey_name) as sub:
                                 try:
-                                    val, _ = winreg.QueryValueEx(sub, "URL Protocol")
+                                    _val, _ = winreg.QueryValueEx(sub, "URL Protocol")
                                     protocol = f"{subkey_name}:"
                                     name = subkey_name.capitalize()
                                     if name.lower() not in discovered:

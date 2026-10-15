@@ -1108,15 +1108,15 @@ class GeminiLiveBridge:
             try:
                 img_bytes: Optional[bytes] = None
                 if isinstance(result.output, dict):
-                    if "base64" in result.output and result.output["base64"]:
+                    if result.output.get("base64"):
                         import base64
 
                         img_bytes = base64.b64decode(result.output["base64"])
-                    elif "artifact_path" in result.output and result.output["artifact_path"]:
+                    elif result.output.get("artifact_path"):
                         p = Path(result.output["artifact_path"])
                         if p.exists():
                             img_bytes = p.read_bytes()
-                    elif "filepath" in result.output and result.output["filepath"]:
+                    elif result.output.get("filepath"):
                         p = Path(result.output["filepath"])
                         if p.exists():
                             img_bytes = p.read_bytes()

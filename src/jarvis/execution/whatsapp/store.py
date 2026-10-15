@@ -1115,7 +1115,7 @@ class WhatsAppDatabaseStore:
                 "target": target,
                 "before": before_msgs,
                 "after": after_msgs,
-                "all_chronological": before_msgs + [target] + after_msgs,
+                "all_chronological": [*before_msgs, target, *after_msgs],
             }
 
     def get_unread_messages_with_context(

@@ -42,7 +42,7 @@ class WorkingMemory:
         self.turns.append(turn)
         if len(self.turns) > self.max_turns:
             # Preserve the very first turn (often the original goal) and trim oldest intermediate turns
-            self.turns = [self.turns[0]] + self.turns[-(self.max_turns - 1) :]
+            self.turns = [self.turns[0], *self.turns[-(self.max_turns - 1) :]]
         self.last_updated = utc_now()
 
     def set_scratchpad(self, key: str, value: Any) -> None:
